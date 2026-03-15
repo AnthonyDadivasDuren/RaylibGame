@@ -1,6 +1,6 @@
 # KILL CUBE
 
-A fast-paced top-down shooter built with raylib and C++. Control a cube through waves of enemies, level up, and choose upgrades to become an unstoppable force. Survive as long as you can and take down the boss on wave 10.
+A fast-paced top-down shooter built with raylib and C++. Control a cube through waves of enemies, level up, and choose upgrades to become an unstoppable force. Survive as long as you can—and take down the boss on wave 10.
 
 ---
 
@@ -26,7 +26,7 @@ Your health is shown at the bottom right; when it hits zero, it’s game over. Y
 | **Choose upgrade** | **1** / **2** / **3** |
 
 
-- **Pistol**: Fires automatically in your **current movement direction** (or last direction if standing still). No ammo; great for constant pressure.
+- **Pistol**: Fires automatically in your **current movement direction** (or last direction if standing still). Infinite ammo; great for constant pressure.
 - **Shotgun**: Fires on **left click**; uses ammo. Ammo is refilled by **dashing through enemies**. Shotgun kills can spawn **health orbs**.
 
 ---
@@ -43,3 +43,14 @@ Your health is shown at the bottom right; when it hits zero, it’s game over. Y
 
 ---
 
+## Enemies
+
+| Enemy | Description |
+|-------|-------------|
+| **Grunt** | Basic red enemy. Moderate speed and health. |
+| **Scout** | Fast, small orange enemy with low health. Shows up more often in later waves. |
+| **Armored** | Large, slow, and tough. Has a shield that blocks normal bullets until you break it with the **shotgun** or **dash**; then it takes normal damage. Drops bonus XP. |
+| **Splitter** | Purple, slow, high health. When killed, splits into **four smaller Splitters** that are faster and still dangerous. |
+| **Splitter (small)** | Spawned only when a Splitter dies. Smaller, quicker, and easier to kill than the big one. |
+
+Rarely, any enemy can spawn as a **special** (gold/magenta glow)—they have more health and give extra XP.
