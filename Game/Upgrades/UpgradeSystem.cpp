@@ -149,8 +149,8 @@ const char* UpgradeSystem::GetUpgradeName(int id) const
     case 0: return "+50 Max Health (+50 heal)";
     case 1: return "+25% Bullet Damage (Pistol)";
     case 2: return "+25% Fire Rate";
-    case 3: return "Ricochet: Pistol bounces to 2nd enemy";
-    case 4: return "Pierce: Pistol passes through enemies";
+    case 3: return "Ricochet: shots bounces to 2nd enemy (Pistol)";
+    case 4: return "Pierce: shots passes through enemies (Pistol)";
     case 5: return "+10% Bullet Size (+10% knockback)";
     case 6: return "Death Explosion (5% chance on kill)";
     case 7: return "+5% Death Explosion radius";
@@ -162,7 +162,7 @@ const char* UpgradeSystem::GetUpgradeName(int id) const
     case 13: return "Ricochet++: bullet splits to 2 enemies";
     case 14: return "Pierce++: +1 pierce, +10% damage (Pistol)";
     case 15: return "+25% XP orb magnetism range";
-    case 16: return "Dash charges +1 (max 3)";
+    case 16: return "Dash charges +1 (max 4)";
     case 17: return "Shotgun +5 pellets (max 3 upgrades)";
     case 18: return "+25% Shotgun pellet damage";
     case 19: return "Auto Attacker: shoots closest enemy in range";
@@ -174,9 +174,9 @@ const char* UpgradeSystem::GetUpgradeName(int id) const
     case 25: return "Orb Companion +Magnetism & Speed";
     case 26: return "Pistol Companion +1 (2nd)";
     case 27: return "Orb Companion +1 (2nd)";
-    case 28: return "Shotgun Companion (weak shotgun)";
+    case 28: return "Shotgun Companion (follows, shoots enemies)";
     case 29: return "Shotgun Companion +1 (2nd)";
-    case 30: return "Ricochet +2 bounces (stackable)";
+    case 30: return "Ricochet +2 bounces";
     default: return "???";
     }
 }
