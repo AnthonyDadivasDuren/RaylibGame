@@ -1,6 +1,6 @@
 # KILL CUBE
 
-A fast-paced top-down shooter built with raylib and C++. Control a cube through waves of enemies, level up, and choose upgrades to become an unstoppable force. Survive as long as you can—and take down the boss on wave 10.
+A fast-paced top-down shooter built with raylib and C++. Control a cube through waves of enemies, level up, and choose upgrades to become an unstoppable force. Survive as long as you can and take down the boss on wave 10.
 
 ---
 
