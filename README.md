@@ -23,7 +23,7 @@ Your health is shown at the bottom right; when it hits zero, it’s game over. Y
 | **Dash** (i-frames, damages enemies, grants shotgun ammo) | **Space** |
 | **Switch weapon** (Pistol ↔ Shotgun) | **Q** |
 | **Shoot shotgun** | **Left mouse button** |
-| **Choose upgrade** (when offered) | **1** / **2** / **3** |
+| **Choose upgrade** | **1** / **2** / **3** |
 
 
 - **Pistol**: Fires automatically in your **current movement direction** (or last direction if standing still). No ammo; great for constant pressure.
