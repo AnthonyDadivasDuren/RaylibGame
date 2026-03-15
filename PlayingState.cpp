@@ -208,13 +208,13 @@ void PlayingState::Draw(EnemyPool* enemyPool, BulletPool* bulletPool, ParticlePo
     companionSystem.Draw();
 
     if (bulletPool) bulletPool->DrawAll();
+    orbSystem.Draw(xpOrbPool, ammoOrbPool, healthOrbPool);
     if (enemyPool) enemyPool->DrawAll();
 
     bossController.Draw(screenWidth, screenHeight);
     shockwaveSystem.Draw();
 
     if (particlePool) particlePool->DrawAll();
-    orbSystem.Draw(xpOrbPool, ammoOrbPool, healthOrbPool);
 
     EffectOverlays::DrawShotgunFlash(shotgunFlashTimer, screenWidth, screenHeight);
     EffectOverlays::DrawDamageFlash(player.GetHitFlashTimer(), screenWidth, screenHeight);
