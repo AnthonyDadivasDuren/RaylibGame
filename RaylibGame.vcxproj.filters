@@ -1,54 +1,201 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
+    <Filter Include="Scripts">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Scripts\Core">
+      <UniqueIdentifier>{a1b2c3d4-e5f6-7890-abcd-ef1234567890}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Scripts\Pools">
+      <UniqueIdentifier>{b2c3d4e5-f6a7-8901-bcde-f12345678901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Shared">
+      <UniqueIdentifier>{c3d4e5f6-a7b8-9012-cdef-123456789012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game">
+      <UniqueIdentifier>{d4e5f6a7-b8c9-0123-def0-234567890123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Player">
+      <UniqueIdentifier>{e5f6a7b8-c9d0-1234-ef01-345678901234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Weapons">
+      <UniqueIdentifier>{f6a7b8c9-d0e1-2345-f012-456789012345}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Enemies">
+      <UniqueIdentifier>{a7b8c9d0-e1f2-3456-0123-567890123456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Upgrades">
+      <UniqueIdentifier>{b8c9d0e1-f2a3-4567-1234-678901234567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Waves">
+      <UniqueIdentifier>{c9d0e1f2-a3b4-5678-2345-789012345678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\UI">
+      <UniqueIdentifier>{d0e1f2a3-b4c5-6789-3456-890123456789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Orbs">
+      <UniqueIdentifier>{e1f2a3b4-c5d6-7890-4567-901234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Game\Companions">
+      <UniqueIdentifier>{f2a3b4c5-d6e7-8901-5678-012345678901}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Scripts\Core\main.cpp">
+      <Filter>Scripts\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Core\Viewport.cpp">
+      <Filter>Scripts\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Core\PlayingState.cpp">
+      <Filter>Scripts\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Pools\EnemyPool.cpp">
+      <Filter>Scripts\Pools</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Upgrades\UpgradeSystem.cpp">
+      <Filter>Scripts\Game\Upgrades</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Upgrades\UpgradeUI.cpp">
+      <Filter>Scripts\Game\Upgrades</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Waves\WaveSystem.cpp">
+      <Filter>Scripts\Game\Waves</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Player\Player.cpp">
+      <Filter>Scripts\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Player\DashSystem.cpp">
+      <Filter>Scripts\Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Enemies\EnemySpawner.cpp">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Enemies\BossController.cpp">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Enemies\EnemySystem.cpp">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Enemies\ShockwaveSystem.cpp">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Weapons\WeaponSystem.cpp">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Weapons\Pistol.cpp">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Weapons\Shotgun.cpp">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Companions\CompanionSystem.cpp">
+      <Filter>Scripts\Game\Companions</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\Orbs\OrbSystem.cpp">
+      <Filter>Scripts\Game\Orbs</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\UI\GameHUD.cpp">
+      <Filter>Scripts\Game\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Game\UI\EffectOverlays.cpp">
+      <Filter>Scripts\Game\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EnemyFactory.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\GameManager.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyPool.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\GameState.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="GameManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\GameOverState.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="GameState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\MenuState.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="MenuState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\PlayingState.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="PlayingState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\StateManager.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="GameOverState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Core\Viewport.h">
+      <Filter>Scripts\Core</Filter>
     </ClInclude>
-    <ClInclude Include="StateManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Pools\BulletPool.h">
+      <Filter>Scripts\Pools</Filter>
     </ClInclude>
-    <ClInclude Include="BulletPool.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Pools\EnemyPool.h">
+      <Filter>Scripts\Pools</Filter>
     </ClInclude>
-    <ClInclude Include="ParticlePool.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Scripts\Pools\ParticlePool.h">
+      <Filter>Scripts\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Pools\XpOrbPool.h">
+      <Filter>Scripts\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Pools\AmmoOrbPool.h">
+      <Filter>Scripts\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Pools\HealthOrbPool.h">
+      <Filter>Scripts\Pools</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Shared\EnemyFactory.h">
+      <Filter>Scripts\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Shared\ExpandingShockwave.h">
+      <Filter>Scripts\Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Upgrades\UpgradeSystem.h">
+      <Filter>Scripts\Game\Upgrades</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Upgrades\UpgradeUI.h">
+      <Filter>Scripts\Game\Upgrades</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\UI\GameHUD.h">
+      <Filter>Scripts\Game\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\UI\EffectOverlays.h">
+      <Filter>Scripts\Game\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Waves\WaveSystem.h">
+      <Filter>Scripts\Game\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Player\Player.h">
+      <Filter>Scripts\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Player\DashSystem.h">
+      <Filter>Scripts\Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Enemies\EnemySpawner.h">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Enemies\BossController.h">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Enemies\EnemySystem.h">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Enemies\ShockwaveSystem.h">
+      <Filter>Scripts\Game\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Weapons\WeaponSystem.h">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Weapons\Pistol.h">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Weapons\Shotgun.h">
+      <Filter>Scripts\Game\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Companions\CompanionSystem.h">
+      <Filter>Scripts\Game\Companions</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Game\Orbs\OrbSystem.h">
+      <Filter>Scripts\Game\Orbs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

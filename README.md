@@ -42,3 +42,16 @@ Your health is shown at the bottom right; when it hits zero, it’s game over. Y
 - **Companions & passives**: Unlock pistol companions, orb companions, shotgun companions, auto-attacker, ricochet, pierce, death explosions, and more through upgrades.
 
 ---
+
+## Project Structure
+
+All game source code is under **`Scripts/`**:
+
+- **`Scripts/Core/`** — `main.cpp`, `GameManager`, states (Menu, Playing, GameOver), `StateManager`, `Viewport`
+- **`Scripts/Pools/`** — `EnemyPool`, `BulletPool`, `ParticlePool`, `XpOrbPool`, `AmmoOrbPool`, `HealthOrbPool`
+- **`Scripts/Shared/`** — `EnemyFactory`, `ExpandingShockwave`
+- **`Scripts/Game/`** — Player, Weapons, Enemies, Upgrades, Waves, UI, Orbs, Companions
+
+The project uses **`$(ProjectDir)Scripts`** in Additional Include Directories so includes use paths like `Core/GameManager.h`, `Pools/BulletPool.h`, `Game/Weapons/Pistol.h`.
+
+---
