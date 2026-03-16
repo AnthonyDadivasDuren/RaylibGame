@@ -20,6 +20,13 @@ void EnemySpawner::Update(float deltaTime, int wave, int screenWidth, int screen
     if (wave >= 2 && wave <= 5) spawnRateMult = 1.0f + (wave - 1) * 0.25f;
     else if (wave >= 6 && wave <= 9) spawnRateMult = 2.0f + (wave - 5) * 0.50f;
     else if (wave >= 10) spawnRateMult = 4.0f + (wave - 9) * 1.0f;
+
+    
+    if (wave > 11)
+    {
+        float postWave11Mult = std::pow(1.5f, (float)(wave - 11));
+        spawnRateMult *= postWave11Mult;
+    }
     spawnRateMult *= 1.25f;
     if (wave <= 3) spawnRateMult *= 0.75f;
     spawnRateMult *= 0.75f;

@@ -29,10 +29,10 @@ int main()
 
 	RenderTexture2D gameRender = LoadRenderTexture(gameWidth, gameHeight);
 
-	EnemyPool enemyPool(300);
+	EnemyPool enemyPool(900);
 	BulletPool bulletPool(400, gameWidth, gameHeight);
-	ParticlePool particlePool(4000);
-	XpOrbPool xpOrbPool(3200);
+	ParticlePool particlePool(8000);
+	XpOrbPool xpOrbPool(15200);
 	AmmoOrbPool ammoOrbPool(128);
 	HealthOrbPool healthOrbPool(240);
 

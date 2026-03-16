@@ -200,6 +200,7 @@ public:
     bool ConsumeShotgunAmmo(int amount) { if (shotgunAmmo < amount) return false; shotgunAmmo -= amount; return true; }
 
     int GetShotgunPelletCount() const { return 10 + shotgunPelletCountBonus; }
+    int GetShotgunPelletUpgradeCount() const { return shotgunPelletCountBonus / 5; }
     float GetShotgunPelletDamageMultiplier() const { return shotgunPelletDamageMultiplier; }
     void AddShotgunPelletCount() { shotgunPelletCountBonus += 5; if (shotgunPelletCountBonus > 15) shotgunPelletCountBonus = 15; }
     void AddShotgunPelletDamageMultiplier(float amount) { shotgunPelletDamageMultiplier += amount; }

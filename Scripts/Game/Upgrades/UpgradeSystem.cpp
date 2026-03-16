@@ -30,7 +30,7 @@ std::vector<int> UpgradeSystem::GetAvailableUpgrades(bool forStart) const
     }
     list.push_back(0); list.push_back(1); list.push_back(2);
     list.push_back(5); list.push_back(9); list.push_back(15);
-    if (GameManager::Instance().GetShotgunPelletCount() < 25) list.push_back(17);
+    if (GameManager::Instance().GetShotgunPelletUpgradeCount() < 3) list.push_back(17);
     list.push_back(18);
     if (!GameManager::Instance().HasRicochetUpgrade()) list.push_back(3);
     else { list.push_back(13); list.push_back(30); }
@@ -162,8 +162,8 @@ const char* UpgradeSystem::GetUpgradeName(int id) const
     case 13: return "Ricochet++: bullet splits to 2 enemies";
     case 14: return "Pierce++: +1 pierce, +10% damage (Pistol)";
     case 15: return "+25% XP orb magnetism range";
-    case 16: return "Dash charges +1 (max 4)";
-    case 17: return "Shotgun +5 pellets (max 3 upgrades)";
+    case 16: return "Dash charges +1";
+    case 17: return "Shotgun +5 pellets";
     case 18: return "+25% Shotgun pellet damage";
     case 19: return "Auto Attacker: shoots closest enemy in range";
     case 20: return "Auto Attacker +80 range";
@@ -172,10 +172,10 @@ const char* UpgradeSystem::GetUpgradeName(int id) const
     case 23: return "Companion +25% damage & fire rate";
     case 24: return "Orb Companion (collects XP orbs)";
     case 25: return "Orb Companion +Magnetism & Speed";
-    case 26: return "Pistol Companion +1 (2nd)";
-    case 27: return "Orb Companion +1 (2nd)";
+    case 26: return "Pistol Companion +1";
+    case 27: return "Orb Companion +1";
     case 28: return "Shotgun Companion (follows, shoots enemies)";
-    case 29: return "Shotgun Companion +1 (2nd)";
+    case 29: return "Shotgun Companion +1";
     case 30: return "Ricochet +2 bounces";
     default: return "???";
     }
