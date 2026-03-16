@@ -33,7 +33,7 @@ public:
     bool TakeDamage(int amount);
     void PlayDeathEffect(BulletPool* bulletPool, ParticlePool* particlePool);
 
-    void CheckBulletHits(BulletPool& bulletPool, ParticlePool* particlePool, GameManager* gm);
+    void CheckBulletHits(BulletPool& bulletPool, ParticlePool* particlePool, GameManager* gm, XpOrbPool* xpOrbPool);
 
     void TickExplosionFlashTimer(float deltaTime);
 

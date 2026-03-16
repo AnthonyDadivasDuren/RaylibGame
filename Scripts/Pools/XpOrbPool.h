@@ -110,6 +110,39 @@ public:
         }
     }
 
+    void SpawnAmount(float x, float y, int totalXp, int minOrbValue = 20, int maxOrbValue = 60)
+    {
+        if (totalXp <= 0) return;
+        if (minOrbValue <= 0) minOrbValue = 1;
+        if (maxOrbValue < minOrbValue) maxOrbValue = minOrbValue;
+
+        int remaining = totalXp;
+        while (remaining > 0)
+        {
+            int value = GetRandomValue(minOrbValue, maxOrbValue);
+            if (value > remaining) value = remaining;
+
+            float offsetX = (float)(GetRandomValue(-24, 24));
+            float offsetY = (float)(GetRandomValue(-24, 24));
+
+            bool spawned = false;
+            for (int i = 0; i < poolSize; i++)
+            {
+                if (!pool[i].active)
+                {
+                    pool[i].Activate(x + offsetX, y + offsetY, value);
+                    spawned = true;
+                    break;
+                }
+            }
+
+            if (!spawned)
+                break;
+
+            remaining -= value;
+        }
+    }
+
     void UpdateAll(float deltaTime, float playerX, float playerY)
     {
         for (int i = 0; i < poolSize; i++)

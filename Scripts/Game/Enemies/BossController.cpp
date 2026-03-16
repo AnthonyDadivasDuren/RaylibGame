@@ -261,7 +261,7 @@ void BossController::PlayDeathEffect(BulletPool* bulletPool, ParticlePool* parti
     explosionFlashTimer_ = 0.3f;
 }
 
-void BossController::CheckBulletHits(BulletPool& bulletPool, ParticlePool* particlePool, GameManager* gm)
+void BossController::CheckBulletHits(BulletPool& bulletPool, ParticlePool* particlePool, GameManager* gm, XpOrbPool* xpOrbPool)
 {
     if (!active_) return;
     for (int j = 0; j < bulletPool.GetPoolSize(); j++)
@@ -276,7 +276,7 @@ void BossController::CheckBulletHits(BulletPool& bulletPool, ParticlePool* parti
             if (TakeDamage(b->damage))
             {
                 PlayDeathEffect(&bulletPool, particlePool);
-                if (gm) gm->AddXp(5000);
+                if (xpOrbPool) xpOrbPool->SpawnAmount(x_, y_, 10000);
                 if (gm) gm->NextWave();
             }
             break;

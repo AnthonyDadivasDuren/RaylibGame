@@ -154,7 +154,7 @@ std::string PlayingState::Update(float deltaTime, EnemyPool* enemyPool, BulletPo
     if (enemyPool && bulletPool) enemyPool->CheckCollisions(*bulletPool, particlePool, xpOrbPool, healthOrbPool);
 
     if (bossController.IsActive() && bulletPool)
-        bossController.CheckBulletHits(*bulletPool, particlePool, &gm);
+        bossController.CheckBulletHits(*bulletPool, particlePool, &gm, xpOrbPool);
 
     enemySystem.HandlePlayerCollisions(&player, enemyPool, bulletPool, &gm, px, py);
 
