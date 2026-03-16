@@ -32,7 +32,7 @@ int main()
 	EnemyPool enemyPool(900);
 	BulletPool bulletPool(400, gameWidth, gameHeight);
 	ParticlePool particlePool(8000);
-	XpOrbPool xpOrbPool(15200);
+	XpOrbPool xpOrbPool(8000);
 	AmmoOrbPool ammoOrbPool(128);
 	HealthOrbPool healthOrbPool(240);
 

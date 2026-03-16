@@ -11,8 +11,9 @@ struct AmmoOrb
     Vector2 velocity;
     bool active;
     float radius;
+    float lifeTime;
 
-    AmmoOrb() : position({ 0, 0 }), velocity({ 0, 0 }), active(false), radius(5.0f) {}
+    AmmoOrb() : position({ 0, 0 }), velocity({ 0, 0 }), active(false), radius(5.0f), lifeTime(0.0f) {}
 
     void Activate(float x, float y)
     {
@@ -22,6 +23,7 @@ struct AmmoOrb
         velocity.y = 0;
         active = true;
         radius = 5.0f;
+        lifeTime = 0.0f;
     }
 
     void Deactivate() { active = false; }
@@ -29,6 +31,12 @@ struct AmmoOrb
     void Update(float deltaTime, float playerX, float playerY)
     {
         if (!active) return;
+        lifeTime += deltaTime;
+        if (lifeTime >= 10.0f)
+        {
+            Deactivate();
+            return;
+        }
         float dx = playerX - position.x;
         float dy = playerY - position.y;
         float dist = std::sqrt(dx * dx + dy * dy);

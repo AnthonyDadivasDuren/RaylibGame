@@ -13,8 +13,9 @@ struct XpOrb
     bool active;
     float radius;
     Color color;
+    float lifeTime;
 
-    XpOrb() : position({ 0, 0 }), velocity({ 0, 0 }), xpValue(1), active(false), radius(4.0f), color(GREEN) {}
+    XpOrb() : position({ 0, 0 }), velocity({ 0, 0 }), xpValue(1), active(false), radius(4.0f), color(GREEN), lifeTime(0.0f) {}
 
     void Activate(float x, float y, int value = 2)
     {
@@ -25,6 +26,7 @@ struct XpOrb
         xpValue = value;
         active = true;
         radius = 4.0f;
+        lifeTime = 0.0f;
         Color greens[] = { GREEN, LIME, DARKGREEN };
         color = greens[GetRandomValue(0, 2)];
     }
@@ -34,6 +36,12 @@ struct XpOrb
     void Update(float deltaTime, float playerX, float playerY)
     {
         if (!active) return;
+        lifeTime += deltaTime;
+        if (lifeTime >= 10.0f)
+        {
+            Deactivate();
+            return;
+        }
         float dx = playerX - position.x;
         float dy = playerY - position.y;
         float dist = std::sqrt(dx * dx + dy * dy);
